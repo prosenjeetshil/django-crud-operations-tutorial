@@ -28,8 +28,8 @@
         <td>{{i.mail}}</td>
         <td>{{i.addr}}</td>
         <td>
-            <button></button>&nbsp;&nbsp;
-            <button></button>
+            <button class="btn btn-warning"><a href="{% url 'update_url' i.oid %}">Update</a></button>&nbsp;&nbsp;
+            <button class="btn btn-danger"><a href="{% url 'delete_url' i.oid %}">Delete</a></button>
         </td>
       </tr>
     {% endfor %}
