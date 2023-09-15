@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    <title>Show Page</title>
+{% endblock %}
+
+{% block content %}
+<center><h1>Show Orders</h1></center>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Order ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Email ID</th>
+        <th scope="col">Address</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in obj %}
+      <tr>
+        <td>{{i.oid}}</td>
+        <td>{{i.fname}}</td>
+        <td>{{i.lname}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.mail}}</td>
+        <td>{{i.addr}}</td>
+        <td>
+            <button></button>&nbsp;&nbsp;
+            <button></button>
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

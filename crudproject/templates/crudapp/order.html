@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Add Page</title>
+{% endblock %}
+
+{% block content %}
+<center><h1>Order Form</h1></center>
+<div class="container">
+    <form method="post" class="jumbotron">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="Place Order" class="btn btn-success">
+    </form>
+</div>
+{% endblock %}
