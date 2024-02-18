@@ -34,7 +34,7 @@ Make sure your app (myapp) is included in the INSTALLED_APPS list:
 ```python
 INSTALLED_APPS = [
     # ...
-    'myapp',
+    'crudapp',
 ]
 ```
 
