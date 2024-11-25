@@ -168,6 +168,26 @@ def deleteView(request, f_oid):
 In this view, we confirm the order deletion with a confirmation page.
 
 ### Creating Templates
+
+Add Bootstrap and Crispy forms for styling
+Before creating templates, let’s add Bootstrap and Crispy Forms for styling our application.
+
+```
+pip install crispy-bootstrap5
+pip install django-crispy-forms
+```
+### Add Bootstrap Crispy forms for styling form and navbar
+
+```python
+INSTALLED_APPS = [
+    # ...
+    'crispy_forms',
+    'crispy_bootstrap5',
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+```
+
 Now, create HTML templates for the views in the crudproject/templates directory. You'll need templates for the following views:
 
 layout.html: for creating base html file with navbar.
@@ -308,18 +328,6 @@ confirmation.html: For confirming order deletion.
         </form>
     </div>
 {% endblock %}
-```
-
-### Add Bootstrap Crispy forms for styling form and navbar
-
-```python
-INSTALLED_APPS = [
-    # ...
-    'crispy_forms',
-    'crispy_bootstrap5',
-]
-
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
 ```
 
 ### Wiring Up URLs
